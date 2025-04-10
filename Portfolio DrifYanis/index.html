@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <section id="main">
+    <section id="start" class="section start">
+      <div class="content-wrapper">
+        <div class="contenu-texte">
+          <h1>Salut, c'est moi</h1>
+          <h2>Drif Yanis</h2>
+          <h3>Je suis <span id="mot"></span><span id="cursor">|</span></h3>
+          <p class="intro-texte">
+            Préparez-vous à plonger dans mon univers créatif à travers un portfolio<br />
+            entièrement conçu par mes soins.<br />
+            <span class="inline-logos">
+              <a href="https://www.linkedin.com/in/yanis-drif-51152a333" target="_blank">
+                <img src="https://devicon-website.vercel.app/api/linkedin/original.svg" alt="LinkedIn" />
+              </a>
+              <a href="https://github.com/Yxniiss" target="_blank">
+                <img src="https://devicon-website.vercel.app/api/github/original.svg?color=%23FFFFFF" alt="GitHub" />
+              </a>
+            </span>
+          </p>
+          <div class="button">
+            <button id="openModal" class="modern-button">Voir mon Portfolio</button>
+          </div>
+        </div>
+
+        <img src="/image/ChatGPT Image 9 avr. 2025, 22_22_18.png" class="image" />
+      </div>
+
+      <div id="loginModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h4>Connexion</h4>
+          <form id="loginForm">
+            <input type="email" id="email" placeholder="Email" required />
+            <input type="password" id="password" placeholder="Mot de passe" required />
+            <button type="submit" class="modern-button2">Se connecter</button>
+          </form>
+        </div>
+      </div>
+
+      <div id="loadingScreen" class="loading-screen">
+        <div class="spinner"></div>
+        <p>Chargement en cours...</p>
+      </div>
+    </section>
+
+    <div id="loader" class="loader loaded">
+      <span class="loader"></span>
+    </div>
+  </section>
+  <script src="/script.js"></script>
+</body>
+</html>
