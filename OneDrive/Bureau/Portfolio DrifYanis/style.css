@@ -244,32 +244,57 @@ body.loaded #main {
 }
 
 .ntwrks {
-  position: absolute;
-  top: 410px;
-  left: 110px;
+  margin-top: 1.5rem;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  .ntwrks {
+    gap: 0.8rem;
+    margin-top: 1rem;
+  }
 }
 
-.ntwrk {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  background-color: #1f1f1f;
-  padding: 1rem 1rem;
-  border-radius: 100px;
-  transition: 0.3s ease, opacity 0.3s ease;
+.intro-texte {
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.5;
 }
-
-.ntwrk:hover {
+.intro-texte .inline-logos {
+  margin-left: 0.5rem;
+  display: inline-flex;
+  gap: 0.6rem;
+  vertical-align: middle;
+}
+.intro-texte .inline-logos a img {
+  width: 80px;
+  height: 80px;
+  padding-top: 20px;
+  transition: transform 0.3s ease;
+}
+.intro-texte .inline-logos a img:hover {
   transform: scale(1.2);
-  opacity: 0.8;
+}
+@media (max-width: 480px) {
+  .intro-texte .inline-logos a img {
+    width: 18px;
+    height: 18px;
+  }
 }
 
-.ntwrk img {
-  width: 30px;
-  height: 30px;
+.button {
+  margin-top: 2rem;
+  display: block;
+  text-align: left;
+  padding-left: 6rem;
+}
+@media (max-width: 768px) {
+  .button {
+    margin-top: 1.5rem;
+    padding: 0 1rem;
+  }
 }
 
 .modern-button {
@@ -281,21 +306,24 @@ body.loaded #main {
   border-radius: 25px;
   cursor: pointer;
   outline: none;
-  position: relative;
-  right: 550px;
-  top: 120px;
   animation: glow 1.5s infinite alternate;
   transition: 0.3s ease, opacity 0.3s ease;
 }
-
-.modern-button a {
-  color: white;
-  text-decoration: none;
-}
-
 .modern-button:hover {
   transform: scale(1.2);
   opacity: 1;
+}
+@media (max-width: 768px) {
+  .modern-button {
+    width: 80%;
+    font-size: 15px;
+  }
+}
+@media (max-width: 480px) {
+  .modern-button {
+    width: 100%;
+    font-size: 14px;
+  }
 }
 
 @keyframes glow {
@@ -306,11 +334,37 @@ body.loaded #main {
     box-shadow: 0 0 20px 10px rgb(0, 194, 255), 0 0 30px 15px rgba(0, 194, 255, 0.8);
   }
 }
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+}
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+    padding: 1rem;
+  }
+}
+
+.contenu-texte {
+  flex: 1;
+  min-width: 280px;
+  max-width: 600px;
+}
+
 .image {
-  max-width: 30%;
-  position: relative;
-  bottom: 350px;
-  left: 350px;
+  max-width: 35%;
+  height: auto;
+  display: block;
+}
+@media (max-width: 768px) {
+  .image {
+    max-width: 80%;
+    margin-top: 2rem;
+  }
 }
 
 .modal {

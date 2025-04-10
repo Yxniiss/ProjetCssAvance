@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(nextSlide, 3000);
   }
 
-  const mot = ["Etudiant", "Developpeur web", "Pasionné de code", "Developpeur fullstack"];
+  const mot = ["Etudiant", "Developpeur web", "Passionné de code", "Developpeur fullstack","21/20 minimum monsieur"];
   let index = 0;
   const element = document.getElementById("mot");
   const cursor = document.getElementById("cursor");

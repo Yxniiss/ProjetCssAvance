@@ -1,3 +1,18 @@
+@import "_variables";
+@import "_buttons";
+
+:root {
+  --primary-color: #00c2ff;
+  --dark-bg: #1f1f1f;
+  --white: #ffffff;
+  --hover-blue: #0056b3;
+  --btn-padding-small: 15px;
+  --btn-padding-large: 30px;
+  --font-md: 16px;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -14,18 +29,18 @@
   .navbar {
     display: flex;
     justify-content: space-between;
-    padding: 1rem 2rem;
-    background-color: #1f1f1f;
+    padding: 1rem var(--space-xl);
+    background-color: var(--dark-bg);
   }
   
   .nav-links {
     display: flex;
     list-style: none;
-    gap: 1.5rem;
+    gap: var(--space-lg);
   }
   
   .nav-links a {
-    color: #00c2ff;
+    color: var(--primary-color);
     text-decoration: none;
   }
   
@@ -36,7 +51,7 @@
   }
   
   .section {
-    padding: 2rem 1rem;
+    padding: var(--space-xl) 1rem;
     text-align: center;
   }
   
@@ -77,7 +92,7 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    background-color: #1f1f1f;
+    background-color: var(--dark-bg);
     padding: 0.5rem 1rem;
     border-radius: 5px;
     transition: 0.3s ease, opacity 0.3s ease;
@@ -96,7 +111,7 @@
   footer {
     padding: 1rem;
     text-align: center;
-    background-color: #1f1f1f;
+    background-color: var(--dark-bg);
     color: #aaa;
   }
   
@@ -109,7 +124,7 @@
   }
 
   .section_cv{
-    padding: 2rem 1rem ;
+    padding: var(--space-xl) 1rem ;
     margin-top: -15rem;
   }
   .cv-container {
@@ -122,14 +137,14 @@
   }
   
   .btn2 {
-    padding: 15px 30px;
-    font-size: 30px;
+    padding: var(--btn-padding-small) var(--btn-padding-large);
+    font-size: var(--btn-padding-large);
     color: white;
     background: linear-gradient(90deg, #ff0066, #ff6600);
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(255, 0, 102, 0);
+    box-shadow: 0 4px var(--btn-padding-small) rgba(255, 0, 102, 0);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
     text-decoration: none;
   }
@@ -173,7 +188,7 @@
   }
   
   .contact-form button {
-    background-color: #00c2ff;
+    background-color: var(--primary-color);
     color: #000;
     padding: 0.75rem;
     border: none;
@@ -209,7 +224,7 @@
   }
   
   #mot {
-    color:#00c2ff;
+    color:var(--primary-color);
   }
   
   #cursor{
@@ -266,7 +281,7 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    background-color: #1f1f1f;
+    background-color: var(--dark-bg);
     padding: 1rem 1rem;
     border-radius: 100px;
     transition: 0.3s ease, opacity 0.3s ease;
@@ -278,16 +293,16 @@
   }
   
   .ntwrk img {
-    width: 30px;
-    height: 30px;
+    width: var(--btn-padding-large);
+    height: var(--btn-padding-large);
   }
   
   .modern-button{
-    background-color:#00c2ff;
-    font-size: 16px;
+    background-color:var(--primary-color);
+    font-size: var(--font-md);
     font-weight: bold;
     border:none;
-    padding: 15px 30px;
+    padding: var(--btn-padding-small) var(--btn-padding-large);
     border-radius: 25px;
     cursor: pointer;
     outline: none;
@@ -313,7 +328,7 @@
       box-shadow: 0 0 10px 5px rgba(0, 194, 255, 0.6), 0 0 20px 10px rgba(0, 194, 255, 0.4);
     }
     100%{
-      box-shadow: 0 0 20px 10px rgba(0, 194, 255, 1), 0 0 30px 15px rgba(0, 194, 255, 0.8);
+      box-shadow: 0 0 20px 10px rgba(0, 194, 255, 1), 0 0 var(--btn-padding-large) var(--btn-padding-small) rgba(0, 194, 255, 0.8);
     }
   }
 
@@ -337,9 +352,9 @@
 }
 
 .modal-content {
-  background-color: #1f1f1f;
+  background-color: var(--dark-bg);
   margin: 10% auto;
-  padding: 30px;
+  padding: var(--btn-padding-large);
   border-radius: 10px;
   width: 90%;
   max-width: 400px;
@@ -350,7 +365,7 @@ input[type="email"],
 input[type="password"] {
   width: 100%;
   padding: 10px;
-  margin: 15px 0;
+  margin: var(--btn-padding-small) 0;
   border-radius: 5px;
   border: none;
 }
@@ -358,14 +373,14 @@ input[type="password"] {
 .modal-content h4 {
   text-align: center;
   margin-bottom: 20px;
-  font-size: 1.5rem;
+  font-size: var(--space-lg);
   font-weight: 600;
 }
 
 .modal-content h4 {
   text-align: center;
   margin-bottom: 20px;
-  font-size: 1.5rem;
+  font-size: var(--space-lg);
   font-weight: 600;
 }
 
@@ -373,10 +388,10 @@ input[type="password"] {
   display: block;
   width: 100%;
   padding: 12px;
-  margin-top: 15px;
+  margin-top: var(--btn-padding-small);
   font-size: 1rem;
   border-radius: 25px;
-  background-color: #00c2ff;
+  background-color: var(--primary-color);
   color: white;
   border: none;
   cursor: pointer;
@@ -410,8 +425,8 @@ input[type="password"] {
 .hero__image {
   border-radius: 25%;
   width: 250px;
-  border: 1px solid #ffffff;
-  margin-bottom: 1.5rem;
+  border: 1px solid var(--white);
+  margin-bottom: var(--space-lg);
 }
 
 .hero__content {
@@ -424,17 +439,17 @@ input[type="password"] {
 }
 
 .hero__tagline {
-  font-size: 1.5rem;
+  font-size: var(--space-lg);
   margin-bottom: 0.5rem;
 }
 
 .hero__desc {
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--space-lg);
 }
 
 .btn {
-  padding: 1rem 2rem;
-  font-size: 1.2rem;
+  padding: 1rem var(--space-xl);
+  font-size: 1.var(--space-xl);
   border-radius: 50px;
   background: linear-gradient(90deg, #ff0066, #ff6600);
   color: white;
@@ -473,13 +488,13 @@ input[type="password"] {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
+  font-size: 1.var(--space-xl);
 }
 
 
 .spinner {
   border: 6px solid #f3f3f3;
-  border-top: 6px solid #00c2ff;
+  border-top: 6px solid var(--primary-color);
   border-radius: 50%;
   width: 60px;
   height: 60px;

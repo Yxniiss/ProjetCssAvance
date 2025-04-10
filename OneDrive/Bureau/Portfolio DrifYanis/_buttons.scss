@@ -1,0 +1,35 @@
+
+.button {
+  margin-top: var(--space-lg);
+  text-align: left;
+  padding-left: var(--space-md);
+}
+
+.modern-button {
+  background-color: var(--primary-color);
+  font-size: var(--font-md);
+  font-weight: bold;
+  border: none;
+  padding: var(--btn-padding-small) var(--btn-padding-large);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  outline: none;
+  animation: glow 1.5s infinite alternate;
+  transition: 0.3s ease, opacity 0.3s ease;
+
+  &:hover {
+    transform: scale(1.2);
+    opacity: 1;
+    background-color: var(--hover-blue);
+  }
+
+  @media (max-width: 768px) {
+    width: 80%;
+    font-size: 15px;
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
+    font-size: var(--font-sm);
+  }
+}
